@@ -4,8 +4,9 @@
   become: true
   vars:
     user: user54321
+    userstate: present
   tasks:
     - name: Skapa användare {{ user }}
       user:
         name: "{{ user }}"
-        state: present
+        state: "{{ userstate }}"
