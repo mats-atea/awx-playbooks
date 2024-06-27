@@ -1,0 +1,16 @@
+version: 3
+
+images:
+  base_image:
+    name: docker.io/redhat/ubi9:latest
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core==2.15.12
+  ansible_runner:
+    package_pip: ansible-runner==2.4.0
+  system:
+  - python3-dns
+  galaxy:
+    collections:
+    - name: community.general
